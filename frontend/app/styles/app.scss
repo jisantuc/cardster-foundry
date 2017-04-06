@@ -1,0 +1,56 @@
+$primary: "blue";
+$accent: "light-blue";
+$warn: "red";
+
+@import 'ember-paper';
+
+body {
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+// Iconfont style
+i {
+	font-family: 'iconfont' !important;
+  font-style: normal;
+}
+
+// Ember container style base
+:root,
+.ember-application,
+.ember-application > .ember-view {
+  height: 100%;
+  background: color($primary, '900');
+  color: #fff;
+  font-size: 1.6rem;
+}
+// Application Container - Inner
+.application-container-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+// Application Container - Inner
+.application-container-inner {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+}
+
+.login-title {
+  font-weight: 300;
+  margin: 0;
+  color: #333;
+}
