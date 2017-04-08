@@ -1,11 +1,9 @@
-<div class="layout-column layout-align-center-center flex">
-  {{#paper-card as |card|}}
-    {{#card.content}}
-      <h3 class="login-title">Cardster Foundry</h3>
-    {{/card.content}}
-    {{#card.actions class="layout-column"}}
-      {{#paper-button primary=true raised=true onClick=(action "login")}}Login with Github{{/paper-button}}
-    {{/card.actions}}
-  {{/paper-card}}
+<div class="login-container layout-column layout-align-center-center flex">
+    <h1 class="login-title">Cardster Foundry</h1>
+    <div class="layout-column layout-align-center-center">
+      {{#paper-button accent=true raised=true onClick=(action "login")}}
+        Login with Github
+      {{/paper-button}}
+    </div>
 </div>
 

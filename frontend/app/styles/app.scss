@@ -1,5 +1,5 @@
 $primary: "blue";
-$accent: "light-blue";
+$accent: "grey";
 $warn: "red";
 
 @import 'ember-paper';
@@ -26,9 +26,6 @@ i {
 .ember-application,
 .ember-application > .ember-view {
   height: 100%;
-  background: color($primary, '900');
-  color: #fff;
-  font-size: 1.6rem;
 }
 // Application Container - Inner
 .application-container-outer {
@@ -49,8 +46,13 @@ i {
   width: 100%;
 }
 
+.login-container {
+  background: color($primary, '900');
+}
+
 .login-title {
   font-weight: 300;
-  margin: 0;
-  color: #333;
+  // margin: 0;
+  color: #fafafa;
+  text-align: center;
 }

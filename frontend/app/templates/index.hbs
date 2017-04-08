@@ -1,2 +1,15 @@
-{{#paper-button raised=true onClick=(action "logout")}}Logout{{/paper-button}}
-{{outlet}}
+{{#paper-toolbar}}
+  {{#paper-toolbar-tools}}
+    <h4>
+      Cardster Foundry
+    </h4>
+    <span class="flex"></span>
+    <h6>{{model.name}}</h6>
+    {{#paper-button onClick=(action "logout")}}
+      Logout
+    {{/paper-button}}
+  {{/paper-toolbar-tools}}
+{{/paper-toolbar}}
+<div class="layout-column layout-align-center-center flex">
+  {{outlet}}
+</div>
