@@ -1,12 +1,16 @@
-import re
-import requests
+import json
 
 from ioutils import GitHub
 
 def lambda_handler(event, context):
-    owner = event.get('owner')
-    repo = event.get('repo')
-    gh_api_token = event.get('gh_api_token')
-    gh_query_params = event.get('gh_query_params')
+    querystring = event['params']['querystring']
+    owner = querystring.get('owner')
+    repo = querystring.get('repo')
+    gh_api_token = querystring.get('gh_api_token')
+    gh_query_params_string = querystring.get('gh_query_params')
+    gh_query_params = (
+        json.loads(gh_query_params_string) if gh_query_params_string else
+        {}
+    )
     github_io = GitHub(gh_api_token)
     return github_io.get_all_issues(owner, repo, gh_query_params)
